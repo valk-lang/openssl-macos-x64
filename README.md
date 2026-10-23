@@ -10,13 +10,13 @@ Requires Valk 0.8.0 or newer.
 ## Install
 
 ```
-vman install github.com/valk-lang/openssl-macos-x64 --allow-libs
+vman install github.com/valk-lang/openssl-macos-x64 --libs
 valk build ./src --target macos-x64
 ```
 
 The package has no code: it holds `libs/macos-x64/` with `libcrypto` and `libssl`, which the compiler
 finds through the dependency. Nothing has to be imported. A package that ships libraries needs
-`"allow-libs": true` on its entry in your `valk.json`, which `--allow-libs` writes; the libraries
+`"libs": true` on its entry in your `valk.json`, which `--libs` writes; the libraries
 in a dependency take precedence over the ones bundled with valk, so this package also serves as
 an OpenSSL update for a release.
 
