@@ -1,0 +1,8 @@
+{
+    "name": "openssl-macos-x64",
+    "require": {
+        "valk": {
+            "min": "0.8.0"
+        }
+    }
+}
